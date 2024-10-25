@@ -1,2 +1,1 @@
 echo "hey my first file"
-echo "updated file"
