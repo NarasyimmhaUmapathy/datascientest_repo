@@ -1,6 +1,6 @@
 from wallet import Wallet, InsufficientAmount
 import pytest
-from pydantic import BaseModel
+
 
 def test_default_balance(wallet:Wallet):
 	wal = Wallet()
