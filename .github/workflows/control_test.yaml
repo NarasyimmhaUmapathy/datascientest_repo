@@ -8,10 +8,10 @@ jobs:
       - name: Checkout on master
         uses: actions/checkout@v3
 
-      - name: list repo files
-        run: 
-          ls ${{ github.workspace }}
-          
+      - name: list files
+        run: |
+          ls -l
+
 	      
       - name: Set up Python
         uses: actions/setup-python@master
