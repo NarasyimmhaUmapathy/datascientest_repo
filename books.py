@@ -7,10 +7,11 @@ class Library():
     def __init__(self,books):
         self.books = books
 
-    def add_book(self,books):
-        
-        [self.books.append(i) for i in books]
-    
+    def add_book(self,author,title):
+        book = Book(author,title)
+        self.books.append(book)
+
+
     def remove_book(self,author,title):
         book = [b for b in self.books if b.title == title]
         self.books.remove(book)
