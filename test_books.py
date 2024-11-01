@@ -9,7 +9,7 @@ books = [book1,book2]
 
 @pytest.fixture
 def library_init():
-    library = Library(books)
+    library = Library()
     return library
 
 def test_init():
@@ -31,7 +31,7 @@ def test_return_books(library_init):
 
 def test_remove_book(library_init):
     library_init.add_book(book1.author,book1.title)
-    library_init.remove_book(book1)
+    library_init.remove_book(book1.title)
     assert library_init.list_books() == []
     
 
