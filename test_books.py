@@ -10,6 +10,7 @@ books = [book1,book2]
 @pytest.fixture
 def library_init():
     library = Library(books)
+    return library
 
 def test_init():
   
