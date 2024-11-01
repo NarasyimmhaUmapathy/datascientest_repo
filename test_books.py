@@ -24,13 +24,13 @@ def test_add_book(library_init):
     assert library_init.search_book_author(author).author ==  book3.author
 
 def test_return_books(library_init):
-    library_init.add_book(book1)
-    library_init.add_book(book2)
+    library_init.add_book(book1.author,book1.title)
+    library_init.add_book(book2.author,book2.author)
     
     assert len(library_init.books) == 2
 
 def test_remove_book(library_init):
-    library_init.add_book(book1)
+    library_init.add_book(book1.author,book1.title)
     library_init.remove_book(book1)
     assert library_init.list_books() == []
     
