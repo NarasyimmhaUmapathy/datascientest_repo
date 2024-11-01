@@ -4,7 +4,7 @@ class Book():
         self.title=title
 
 class Library():
-    def __init__(self,books):
+    def __init__(self,books=None):
         self.books = books
 
     def add_book(self,author,title):
