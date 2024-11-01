@@ -11,7 +11,7 @@ jobs:
       - name: list repo files
 	run: |
 	 ls -l
-	 pydantic -V
+	 
 
       - name: Set up Python
         uses: actions/setup-python@master
