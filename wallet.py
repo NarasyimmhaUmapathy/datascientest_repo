@@ -1,4 +1,6 @@
-class Wallet(object):
+from pydantic import BaseModel
+
+class Wallet(BaseModel):
 
     def __init__(self, initial_amount=0):
         self.balance = initial_amount
