@@ -9,11 +9,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: list repo files
-        run: ls ${{ github.workspace }}
+        run: 
+          ls ${{ github.workspace }}
           
 	      
-	 
-
       - name: Set up Python
         uses: actions/setup-python@master
         with:
