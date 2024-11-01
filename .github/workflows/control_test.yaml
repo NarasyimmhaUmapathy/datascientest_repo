@@ -8,9 +8,6 @@ jobs:
       - name: Checkout on master
         uses: actions/checkout@v3
 
-      - name: list files
-        run: |
-          ls -l
 
 	      
       - name: Set up Python
