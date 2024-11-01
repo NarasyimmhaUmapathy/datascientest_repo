@@ -4,7 +4,7 @@ import pytest
 
 def test_default_balance():
 	wal = Wallet()
-	assert wal.initial_amount == 0
+	assert wal.balance == 0
 
 def test_new_wallet():
 	wak = Wallet(initial_amount=100)
