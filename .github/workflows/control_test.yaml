@@ -10,15 +10,18 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@master
-      with:
+        with:
           python-version: "3.x"
 
-      - name: Install pytest and pydantic
+      - name: Install pytest and flake8
         run: |
           pip install pytest
-          pip install pydantic
           pip install flake8
 
-     - name: run test
-       run: |
-	 pytest
+
+      - name: Run tests
+        run: |
+          pytest
+
+      - name: Run flake8
+        uses: py-actions/flake8@v2
