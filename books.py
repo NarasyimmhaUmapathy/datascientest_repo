@@ -12,14 +12,14 @@ class Library():
         self.books.append(book)
 
 
-    def remove_book(self,author,title):
+    def remove_book(self,title):
         book = [b for b in self.books if b.title == title]
         self.books.remove(book)
 
-    def list_books(self,author,title):
+    def list_books(self):
         return self.books
     
-    def search_book_author(self,author,title):
+    def search_book_author(self,author):
         book = [b for b in self.books if b.author == author]
         return book
     

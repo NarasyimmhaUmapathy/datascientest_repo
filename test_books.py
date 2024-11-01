@@ -9,7 +9,7 @@ books = [book1,book2]
 
 @pytest.fixture
 def library_init():
-    library = Library()
+    library = Library(books)
     return library
 
 def test_init():
@@ -20,8 +20,8 @@ def test_init():
 
 def test_add_book(library_init):
     book3 = Book("bbb","ccc")
-    library_init.add_book(book3)
-    assert library_init.search_book_author(author).author == "bbb"
+    library_init.add_book(book3.author,book3.title)
+    assert library_init.search_book_author(author).author ==  book3.author
 
 def test_return_books(library_init):
     library_init.add_book(book1)
