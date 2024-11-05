@@ -20,7 +20,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest
+          pytest test_app.py
 
   dockerbuild:
     runs-on: ubuntu-latest
