@@ -1,6 +1,13 @@
 name: Control Push
 on: push
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+    - uses: actions/checkout@v4
+    - name: Build docker image
+      run: docker build . --file DockerFile --tag workflow-test:$(date+%s)
+
   qa:
     name: Check tests
     runs-on: ubuntu-20.04
